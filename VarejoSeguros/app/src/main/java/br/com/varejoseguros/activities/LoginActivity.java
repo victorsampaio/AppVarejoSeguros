@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void carregaMenuPrincipal() {
         Toast.makeText(this, "Deu certo", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
+        Intent intent = new Intent(LoginActivity.this, FormularioActivity.class);
         startActivity(intent);
         finish();
     }
