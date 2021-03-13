@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Varejo Seguros</string>
+    <string name="app_package">br.com.varejoseguros</string>
+    <!--Login-->
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="acessar">Acessar</string>
+    <string name="proximo">PRÓXIMO</string>
+    <string name="string_proximo" />
+    <string name="celular_do_cliente">CELULAR DO CLIENTE</string>
+    <string name="cpf_do_cliente">CPF DO CLIENTE</string>
+    <string name="cpf_do_vendedor">CPF DO VENDEDOR</string>
+    <string name="celular_do_vendedor">CELULAR DO VENDEDOR</string>
+    <string name="confere_celular_do_cliente">CELULAR DO CLIENTE (REPETIR)</string>
+    <string name="cep">CEP</string>
+    <string name="numero">NÚMERO</string>
+    <string name="dados_do_vendedor">DADOS DO VENDEDOR</string>
+    <string name="dados_do_cliente">DADOS DO CLIENTE</string>
+    <string name="complemento">COMPLEMENTO</string>
+    <string name="produtos_disponiveis">SELECIONE OS PRODUTOS</string>
+    <string name="itens">ITENS</string>
+    <string name="qtd_0">QTD. : 0</string>
+    <string name="reais_valor">R$ 0</string>
+    <string name="data_de_nascimento">DATA DE NASCIMENTO</string>
+    <string name="oferta">Oferta</string>
+    <string name="descricao">Descrição</string>
+    <string name="preco">Preço</string>
+    <string name="placa_numeros"></string>
+    <string name="dados_do_veiculo">DADOS DO VEÍCULO</string>
+    <string name="placa_letras">YYY</string>
+    <string name="placa_do_veiculo">PLACA DO VEÍCULO</string>
+    <string name="placa_numero">1234</string>
+    <string name="renavamnew">RENAVAM *SOMENTE PARA VEÍCULOS ZERO KM*</string>
+    <string name="renavam">RENAVAM</string>
+    <string name="campo_renavam">NÚMERO DE 11 DIGITOS</string>
+    <string name="campo_chassis">CHASSIS</string>
+    <string name="chassis">Nº DO CHASSIS</string>
+    <string name="quilometragem">QUILOMETRAGEM</string>
+    <string name="campo_veiculo">DIGITE A QUILOMETRAGEM</string>
+    <string name="foto_da_quilometragem">TIRAR FOTO DA QUILOMETRAGEM</string>
+    <string name="finalizar_pedido">FINALIZAR COMPRA</string>
+    <string name="servicos_e_seguros">SEGUROS E SERVIÇOS</string>
+    <string name="consulta_de_debito">CONSULTA DE DÉBITO</string>
+    <string name="prestacao_de_servico">PRESTAÇÃO DE SERVIÇO</string>
+    <string name="financiamento">FINANCIAMENTO</string>
+    <string name="compra">COMPRA DE VEÍCULOS</string>
+    <string name="questionario">PERFIL DO CLIENTE</string>
+    <string name="pergunta1">1) Veículo é guardado em garagem/estacionamento fechado na residência?</string>
+    <string name="pergunta2">2) Veículo é guardado em garagem/estacionamento fechado quando utilizado para na ir a local de trabalho?</string>
+    <string name="pergunta3">3) Veículo é guardado em garagem/estacionamento fechado quando utilizado para ir a faculdade/colégio?</string>
+    <string name="tipo_de_utilizacao">Tipo de Utilização</string>
+    <string name="dados_condutor">DADOS DO PRINCIPAL CONDUTOR</string>
+    <string name="cpf_do_condutor">CPF do CONDUTOR</string>
+    <string name="data_nascimento_do_condutor">DATA NASCIMENTO DO CONDUTOR</string>
+    <string name="cifra">R$</string>
+    <string name="btncarro">CARRO</string>
+    <string name="btncartao">CANCELAMENTO</string>
+    <string name="btnmoto">MOTO</string>
+    <string name="subtitulo_placa">PARA VEÍCULO USADOS</string>
+    <string name="subtitulo_dados_sem_placa">SOMENTE PARA VEÍCULOS 0KM</string>
+    <string name="subtitulo_valor_veiculo">VALOR DO VEÍCULO NA NF</string>
+    <string name="subtitulo_condutor">ATENÇÃO - CASO O CLIENTE NÃO SEJA O PRINCIPAL CONDUTOR, PREENCHA OS CAMPOS ABAIXO COM OS DADOS DO PRINCIPAL CONDUTOR.</string>
+    <string name="valor_veiculo">R$ 999.999.99</string>
+    <string name="todo">TODO</string>
+    <string name="pagamento">PAGAMENTO</string>
+    <string name="carrinho_de_compras">CARRINHO DE COMPRAS</string>
+
+    <!-- Mensagens de erro -->
+    <string name="msg_server_error">Ocorreu um erro inesperado no servidor. Tente novamente mais tarde.</string>
+    <string name="msg_invalid_login">Nome de usuário ou senha incorretos. Entre novamente com os dados.</string>
+    <string name="msg_error_load_data">Erro ao carregar dados. Tente novamente mais tarde.</string>
+    <string name="cameraError">A sua camera apresentou um problema, se o problema persistir por favor entre em contato com o administrador</string>
+    <string name="falha_conexao">Você pode estar em um local com baixo sinal de conexão de internet.\n\nPor favor, verifique o sinal, aguarde 30 segundos e tente novamente.\n\n\nTentar novamente\n\n\n</string>
+    <string name="falha_permanente">Ocorreu uma falha no funcionamento.\n\n\nPor favor, reinicie o POS, verifique o sinal de Internet no aparelho e tente novamente.\n\n\nSe o problema persistir, entre em contato com IBug.</string>
+
+
+</resources>
