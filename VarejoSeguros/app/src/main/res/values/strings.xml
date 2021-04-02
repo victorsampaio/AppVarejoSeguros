@@ -65,6 +65,8 @@
     <string name="pagamento">PAGAMENTO</string>
     <string name="carrinho_de_compras">CARRINHO DE COMPRAS</string>
 
+    <string name="adicionar_produtos">Adicionar Produtos</string>
+
     <!-- Mensagens de erro -->
     <string name="msg_server_error">Ocorreu um erro inesperado no servidor. Tente novamente mais tarde.</string>
     <string name="msg_invalid_login">Nome de usuário ou senha incorretos. Entre novamente com os dados.</string>

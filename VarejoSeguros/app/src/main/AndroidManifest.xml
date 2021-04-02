@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VarejoSeguros">
-        <activity android:name=".activities.FormularioActivity"></activity>
+        <activity android:name=".activities.ListaOfertasActivity"></activity>
+        <activity android:name=".activities.FormularioActivity" />
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
