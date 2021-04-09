@@ -8,10 +8,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import br.com.varejoseguros.R;
-import br.com.varejoseguros.util.ValidaCpf;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static br.com.varejoseguros.util.VarejoSharedPreferences.stockVendedorOnSharedPref;
 
 public class FormularioActivity extends AppCompatActivity {
 
@@ -106,6 +107,12 @@ public class FormularioActivity extends AppCompatActivity {
             Toast.makeText(this, "getText(R.string.NumeroClienteVazio)", Toast.LENGTH_LONG).show();
             return;
         }
+        saveOnSharedPref();
+
+    }
+
+    private void saveOnSharedPref() {
+        stockVendedorOnSharedPref(cpfCnpjVendedor.getText().toString(), foneVendedor.getText().toString(), "loja1");
     }
 
     Boolean testaCPF(String cpf) {
@@ -114,7 +121,7 @@ public class FormularioActivity extends AppCompatActivity {
         int Soma = 0;
         int Resto = 0;
 
-        if (cpf == "00000000000") return false;
+        if (cpf.equals("00000000000") || cpf == "00000000000") return false;
 
         if (cpf.length() < 11) return false;
 

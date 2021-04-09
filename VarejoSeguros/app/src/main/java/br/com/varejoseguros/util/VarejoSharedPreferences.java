@@ -1,6 +1,7 @@
 package br.com.varejoseguros.util;
 
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import br.com.varejoseguros.R;
 
@@ -8,6 +9,9 @@ import static android.content.Context.MODE_PRIVATE;
 import static android.content.Context.USER_SERVICE;
 import static br.com.varejoseguros.model.enuns.SharedPreferenceKeys.SENHA;
 import static br.com.varejoseguros.model.enuns.SharedPreferenceKeys.USUARIO;
+import static br.com.varejoseguros.model.enuns.SharedPreferenceKeys.VENDEDOR_CONTATO;
+import static br.com.varejoseguros.model.enuns.SharedPreferenceKeys.VENDEDOR_CPF;
+import static br.com.varejoseguros.model.enuns.SharedPreferenceKeys.VENDEDOR_ID_LOJA;
 import static br.com.varejoseguros.util.VarejoSegurosApp.getAppContext;
 
 import static br.com.varejoseguros.model.enuns.SharedPreferenceKeys.ACCESS_TOKEN;
@@ -47,6 +51,19 @@ public class VarejoSharedPreferences {
         editor.putString(USUARIO.getValue(), username);
         editor.putString(SENHA.getValue(), password);
         
+        editor.apply();
+        updateSharedPreferences();
+    }
+
+    public static void stockVendedorOnSharedPref(String cpfCnpjVendedor, String numeroCelularVendedor, String idloja) {
+        Log.d("SP_vend",  "Vendedor: " + cpfCnpjVendedor + " - " + numeroCelularVendedor + " - " + idloja);
+        SharedPreferences sharedPref = getAppContext().getSharedPreferences(getAppContext().getString(R.string.app_package), MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putString(VENDEDOR_CPF.getValue(), cpfCnpjVendedor);
+        editor.putString(VENDEDOR_CONTATO.getValue(), numeroCelularVendedor);
+        editor.putString(VENDEDOR_ID_LOJA.getValue(), idloja);
+
         editor.apply();
         updateSharedPreferences();
     }
