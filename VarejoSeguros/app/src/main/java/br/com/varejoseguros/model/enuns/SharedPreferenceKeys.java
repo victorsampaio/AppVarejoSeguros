@@ -4,7 +4,10 @@ public enum  SharedPreferenceKeys {
 
     USUARIO("usuario"),
     SENHA("senha"),
-    ACCESS_TOKEN("access_token");
+    ACCESS_TOKEN("access_token"),
+    VENDEDOR_CPF("cpfCnpjVendedor"),
+    VENDEDOR_CONTATO("numeroCelularVendedor"),
+    VENDEDOR_ID_LOJA("idLoja");
 
     private final String value;
 
