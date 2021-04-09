@@ -1,5 +1,6 @@
 package br.com.varejoseguros.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -13,10 +14,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.varejoseguros.R;
+import br.com.varejoseguros.api.VarejoApi;
+import br.com.varejoseguros.api.interfaces.OfertaVarejoInterface;
+import br.com.varejoseguros.api.request.Comprador;
+import br.com.varejoseguros.api.request.Endereco;
+import br.com.varejoseguros.api.request.OfertasVarejoRequest;
+import br.com.varejoseguros.api.request.Vendedor;
 import br.com.varejoseguros.api.response.OfertasResponse;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ListaOfertasActivity extends AppCompatActivity {
     @BindView(R.id.floatingMenu)
@@ -52,6 +62,7 @@ public class ListaOfertasActivity extends AppCompatActivity {
         configuraFloatActionMenu();
         configuraAdapters();
 
+        configuraObjFake();
     }
 
     @OnClick(R.id.buttonAdicionarProdutos)
@@ -60,12 +71,12 @@ public class ListaOfertasActivity extends AppCompatActivity {
     }
 
     void configuraFloatActionMenu() {
-        
+
         btnGarantiaEstendida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //CHAMA A LISTAGEM DE GARANTIA ESTENDIDA
-                Log.e("TESTE","GARANTIA ESTENDIDA");
+                Log.e("TESTE", "GARANTIA ESTENDIDA");
                 floatingMenu.collapse();
             }
         });
@@ -74,7 +85,7 @@ public class ListaOfertasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //CHAMA A LISTAGEM ASSISTENCIA TECNICA
-                Log.e("TESTE","ASSISTENCIA TECNICA");
+                Log.e("TESTE", "ASSISTENCIA TECNICA");
                 floatingMenu.collapse();
             }
         });
@@ -83,7 +94,7 @@ public class ListaOfertasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //CHAMA A LISTAGEM DE GARANTIA CELULAR
-                Log.e("TESTE","GARANTIA CELULAR");
+                Log.e("TESTE", "GARANTIA CELULAR");
                 floatingMenu.collapse();
             }
         });
@@ -92,7 +103,7 @@ public class ListaOfertasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //CHAMA A LISTAGEM DE PLANO DENTAL
-                Log.e("TESTE","PLANO DENTAL");
+                Log.e("TESTE", "PLANO DENTAL");
                 floatingMenu.collapse();
             }
         });
@@ -101,7 +112,7 @@ public class ListaOfertasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //CHAMA A LISTAGEM DE SERVICOS GERAIS
-                Log.e("TESTE","SERVICOS GERAIS");
+                Log.e("TESTE", "SERVICOS GERAIS");
                 floatingMenu.collapse();
 
             }
@@ -111,7 +122,7 @@ public class ListaOfertasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //CHAMA A LISTAGEM DE OBJETOS ROUBO FURTO
-                Log.e("TESTE","ROUBO FURTO");
+                Log.e("TESTE", "ROUBO FURTO");
                 floatingMenu.collapse();
             }
         });
@@ -121,4 +132,38 @@ public class ListaOfertasActivity extends AppCompatActivity {
     void configuraAdapters() {
 
     }
+
+    private void configuraObjFake() {
+        Vendedor vendedor = new Vendedor("38271870874", "1302", "11966100936");
+        Endereco endereco = new Endereco("04080012", "", "55");
+        Comprador comprador = new Comprador("29160032820", "11966100936", endereco);
+        OfertasVarejoRequest request = new OfertasVarejoRequest(vendedor, comprador);
+
+        requestProducts(request);
+    }
+
+
+    private void requestProducts(OfertasVarejoRequest request) {
+
+        VarejoApi.getAllProducts(request).enqueue(new Callback<OfertaVarejoInterface>() {
+            @Override
+            public void onResponse(@NonNull Call<OfertaVarejoInterface> request, @NonNull Response<OfertaVarejoInterface> response) {
+                Integer statusCode = response.code();
+
+                if (statusCode == 200) {
+
+                } else if (statusCode == 401) {
+
+                } else {
+
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<OfertaVarejoInterface> call, @NonNull Throwable t) {
+
+            }
+        });
+    }
+
 }

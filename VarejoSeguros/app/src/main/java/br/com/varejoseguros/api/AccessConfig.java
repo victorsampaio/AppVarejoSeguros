@@ -3,8 +3,12 @@ package br.com.varejoseguros.api;
 public enum AccessConfig {
 
     AUTHORIZATION("authorization"),
-    BASE_URL_DEV("http://ibug.westus.cloudapp.azure.com/APIServiceVarejo"),
-    BASE_URL_PROD("");
+
+    /* URL Desenvolvimento */
+    BASE_URL("http://ibug.westus.cloudapp.azure.com/APIServiceVarejo");
+
+    /* URL Produção */
+    //BASE_URL("");
 
     private final String value;
 
