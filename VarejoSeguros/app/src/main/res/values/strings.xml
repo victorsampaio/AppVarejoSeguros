@@ -75,5 +75,12 @@
     <string name="falha_conexao">Você pode estar em um local com baixo sinal de conexão de internet.\n\nPor favor, verifique o sinal, aguarde 30 segundos e tente novamente.\n\n\nTentar novamente\n\n\n</string>
     <string name="falha_permanente">Ocorreu uma falha no funcionamento.\n\n\nPor favor, reinicie o POS, verifique o sinal de Internet no aparelho e tente novamente.\n\n\nSe o problema persistir, entre em contato com IBug.</string>
 
+    <!--TODO BTN FABMENU-->
+    <string name="garantiaEstendida">Garantia Estendida</string>
+    <string name="assistenciaTecnica">Assistência Técnica</string>
+    <string name="garantiaCelular">Garantia Celular</string>
+    <string name="planoDental">Plano Dental</string>
+    <string name="servicosGerais">Serviços Gerais</string>
+    <string name="garantiaRouboFurto">Garantia Roubo e Furto</string>
 
 </resources>
